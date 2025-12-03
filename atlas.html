@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Atlas Grzybów</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_atlas.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+        <button class="hamburger"><span></span><span></span><span></span></button>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="atlas.html">Atlas Grzybów</a></li>
+                <li><a href="#">Porady</a>
+                    <ul class="dropdown">
+                        <li><a href="zbieranie.html">Zbieranie</a></li>
+                        <li><a href="przechowywanie.html">Przechowywanie</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-title">
+            <h1>Atlas Grzybów</h1>
+        </div>   
+    </section>
+
+    <main class="atlas-main">
+        <aside class="sidebar">
+            <h3>Filtruj grzyby</h3>
+                <label><input type="checkbox" id="filter-edible" checked> Jadalne</label>
+                <label><input type="checkbox" id="filter-toxic" checked> Trujące</label>
+                <label><input type="checkbox" id="filter-inedible" checked> Niejadalne</label>
+        </aside>
+
+        <section class="atlas-grid">
+            <!---kafelki ladowane za pomoca js-->
+        </section>
+    </main>
+ 
+
+    <footer>&copy; 2025 Świat Grzybów. All rights reserved.</footer>
+
+</body>
+</html>

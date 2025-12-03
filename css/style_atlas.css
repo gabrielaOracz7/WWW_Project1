@@ -1,0 +1,256 @@
+body {
+    background-color: #C7AF94;
+}
+
+
+/*-----------------------------HERO PART-----------------------------*/
+.hero{
+    background-image: url('../images/hero_images/atlas_hero.png');
+    height: 50vh;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom, rgba(199, 175, 148, 0) 0%, #C7AF94 100%);
+}
+
+.hero-title{
+    color:#C7AF94;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+
+
+/*-----------------------------MAIN PART-----------------------------*/
+.atlas-main{
+    width: 90%;
+    display: flex;
+    gap: 2em;
+    margin: 0 auto;   
+}
+
+
+/*---------------SIDEBAR---------------*/
+.sidebar {
+    flex: 0 0 30%;
+    padding: 1em 1em;
+    border-radius: 20px;
+    color: #412F26;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sidebar h3{
+    background-color: #516140;
+    color: #C1BCAC;
+    text-align:center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.7em;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar label{
+    padding-left: 10px;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+
+.sidebar input[type="checkbox"]{
+    accent-color: #516140;
+}
+
+
+
+/*---------------ATLAS GRID---------------*/
+.atlas-grid {
+    flex:1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.mushroom-card {
+    border: 3px solid rgb(204, 204, 204);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    min-height: 20rem;
+    justify-content: space-between;
+}
+
+.mushroom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.mushroom-card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+}
+
+.mushroom-card h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.mushroom-card .type {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.type.edible {
+    background-color: #303f20;
+    color:aliceblue;
+    border-radius: 10px;
+    padding: 0.3em 0.3em;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.type.inedible {
+    background-color: #8d6a09;
+    border-radius: 10px;
+    color:aliceblue;
+    padding: 0.3em 0.3em;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.type.toxic {
+    background-color:  #691b04;
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 0.3em 0.3em;
+    width: 70%;
+    margin: 0 auto;    
+}
+
+
+
+
+
+
+
+/**************************************************************************************
+____________________________________RESPONSYWNOŚĆ____________________________________*/
+
+@media (max-width: 1220px) {
+    .hero {
+        height: 35vh;
+    }
+
+    .hero-title h1 {
+        font-size: clamp(4rem, 5vw, 6rem);
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .atlas-main {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+        width: 95%;
+    }
+
+    .sidebar {
+        flex: none;
+        width: 100%;
+    }
+
+    .atlas-grid {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 10px;
+    }
+}
+
+
+
+
+@media (max-width: 768px){
+    .hero {
+        height: 30vh;
+    }
+
+    .hero-title h1 {
+        font-size: clamp(1.8rem, 6vw, 2.2rem);
+    }
+
+    .atlas-main {
+        gap: 15px;
+        width: 95%;
+        padding: 0;
+    }
+
+    .sidebar h3 {
+        font-size: 1.4rem;
+    }
+
+    .sidebar label {
+        font-size: 1rem;
+    }
+
+    .atlas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 5px;
+    }
+
+    .mushroom-card img {
+        height: 70%;  
+    }
+
+    .mushroom-card{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;           
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .hero {
+        height: 25vh;
+    }
+
+    .hero-title h1 {
+        font-size: clamp(1.6rem, 7vw, 2rem);
+    }
+
+    .atlas-grid {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }  
+}
+

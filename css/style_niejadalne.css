@@ -1,0 +1,601 @@
+/*-----------------------------HERO PART-----------------------------*/
+.hero {
+    background-color: #5f4835;
+    gap: 5em;
+    padding: 2em 5em;
+    height: 45vh;
+    overflow: visible;
+}
+
+.hero-title {
+    color: white;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title h1{ 
+    font-size: clamp(2rem, 5vw, 4.5rem); 
+}
+
+.hero-title h3 { 
+    font-size: clamp(1rem, 2.5vw, 1.5rem); 
+    font-style: italic; 
+
+}
+
+.hero-title .type {
+    margin-top: 1em;
+    background-color: #8d6a09;
+    color: white;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    text-align: center;
+    width: fit-content;
+    font-size: clamp(1rem, 2.5vw, 1.5rem); 
+}
+
+
+
+/*---------------CAROUSEL---------------*/
+.img-carousel {
+    position: relative;
+    width: 40%;
+    top: 0;
+    aspect-ratio: 4/3;
+}
+
+.img-carousel .carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 10px;
+}
+
+.img-carousel .carousel-image.active {
+    opacity: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    border: none;
+    color: #fff;
+    padding: 0.5em 1em;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 2;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+}
+
+.carousel-btn.prev { left: 0.5em; }
+.carousel-btn.next { right: 0.5em; }
+
+.carousel-btn:hover { background-color: rgba(0,0,0,0.7); }
+
+
+
+
+
+/*-----------------------------CHARACTERISTICS-----------------------------*/
+.characteristics{
+    width: 80%;
+    margin: 7em auto;
+    padding: 2em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+.characteristics h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    color: #38230c;
+}
+
+.characteristics table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.characteristics th, .characteristics td {
+    border: 1px solid #ddd;
+    padding: 0.8em 1em;
+    text-align: left;
+}
+
+.characteristics th {
+    background-color: #917d0e;
+    color: #fff;
+}
+
+
+
+/*-----------------------------WHY INEDIBLE PART-----------------------------*/
+.why-inedible{
+    display: flex;
+    gap: 2em;
+    align-items: stretch;
+    font-weight: bold;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.why-header{
+    flex: 0 0 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    text-align: left;
+    color: #38230c;
+}
+
+.highlight {
+    color: #b49b0e;
+    font-weight: 700;
+    text-shadow: 0 3px 7px rgb(39, 34, 4);    
+}
+
+.why-cards{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 1fr;
+    gap: 1em;
+}
+
+.why-card{
+    padding: 2em;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);   
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.card1 {background-color: #38230c;}
+.card2 {background-color: #443528;}
+.card3 {background-color: #613608;}
+.card4 {background-color: #6e563b;}
+
+
+
+/*-----------------------------OCCURRENCE-----------------------------*/
+.occurrence {
+    background-color: #917d0e;
+    min-height: 45vh;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 90%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+    padding: 7em 0;
+}
+
+
+.occurrence-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    align-items: center; 
+}
+
+.occurrence-title{
+    font-size: 2.7rem;
+    color:#fff;
+    text-align: center;
+}
+
+.occurrence-cards{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2em;
+}
+
+.occurrence-card{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #adaaaa;
+}
+
+.occurrence-card img{
+    width: 12%;
+    height: auto;
+    margin-bottom: 0.7em;
+}
+
+.occurrence-card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+
+
+
+
+/*-------------------------------USES PART-------------------------------*/
+.uses{
+    width: 90%;
+    margin: 5em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.uses-row {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap; 
+    margin-bottom: 1.5em;
+}
+
+.use-box {
+    padding: 1.5em 2em;
+    color:#fff;
+    font-size: 1.3rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.use-box.small { flex: 1; min-width: 150px; }
+.use-box.large { flex: 2; min-width: 200px; }
+
+.uses-title-box {
+    flex: 1.5;
+    color: #aa9209;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.5em;
+    text-shadow: 0 6px 15px rgba(43, 42, 41, 0.6);
+    font-size: clamp(2.5rem, 5vw, 5rem); 
+    max-width: 100%; 
+    word-wrap: break-word; 
+    hyphens: auto;
+}
+
+.uses-row:nth-child(1) .small { background-color: #6e563b; }
+.uses-row:nth-child(1) .large { background-color: #38230c; }
+
+.uses-row:nth-child(2) .small:nth-child(1) { background-color: #4a2f0c; }
+.uses-row:nth-child(2) .small:nth-child(3) { background-color: #7a5f42; }
+
+.uses-row:nth-child(3) .large { background-color: #4d3a21; }
+.uses-row:nth-child(3) .small { background-color: #613608; }
+
+
+
+
+
+
+/*-----------------------------SIMILAR SPECIES-----------------------------*/
+
+.similar-species{
+    width: 90%;
+    margin: 5em auto;
+}
+
+.similar-species-title{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    color: #38230c;
+}
+
+.species-cards{
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.species-card{
+    width: 22%;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);    
+}
+
+.species-card:hover{
+    transform: translateY(-5px);
+}
+
+.species-card img{
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.species-info{
+    text-align: center;
+    padding: 1em;
+}
+
+.species-info h3{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.species-info p {
+    font-size: 1rem;
+}
+
+.species-card.edible {
+    box-shadow: 0 6px 15px rgba(52, 142, 36, 0.6);
+}
+
+.species-card.inedible {
+    box-shadow: 0 6px 15px rgba(209, 178, 39, 0.6);
+}
+
+.species-card.toxic {
+    box-shadow: 0 6px 15px rgba(156, 15, 5, 0.6);
+}
+
+
+
+
+
+
+
+/***************************************************************************************
+____________________________________RESPONSYWNOŚĆ____________________________________*/
+@media (max-width: 1024px) {
+    .occurrence {
+        padding: 5em 0;
+    }
+
+    .why-header {
+        flex: 1 0 100%;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .why-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+
+    .uses-row {
+        gap: 1em;
+    }
+
+    .use-box, .uses-title-box {
+        font-size: 1.2rem;
+        min-width: 100%;
+    }
+
+    .uses-title-box {
+        font-size: 4rem;
+    }
+}
+
+
+
+
+@media (max-width: 992px) {
+
+    .hero {
+        flex-direction: column;
+        padding: 2em 2em;
+        height: auto;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .hero-title {
+        max-width: 90%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-title .type {
+        padding: 0.4em 0.8em;
+    }
+
+    .img-carousel {
+        width: 70%;
+        top: 0;
+    }
+
+    .carousel-btn{
+        font-size: 1.5rem;
+    }
+
+    .characteristics {
+        width: 90%;
+        padding: 1.5em;
+    }
+
+    .occurrence-cards {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .occurrence-card {
+        width: 100%;
+    }
+
+    .species-cards {
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .species-card {
+        width: 45%;
+    }
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+   .hero {
+        padding: 1em 1em;
+        height: auto;
+    }
+
+    .hero-title {
+        max-width: 80%;
+    }
+
+    .hero-title .type {
+        width: auto;
+        padding: 0.3em 0.6em;
+    }    
+
+    .img-carousel {
+        width: 90%;
+        aspect-ratio: 4/3;
+    }
+
+    .carousel-btn{
+        font-size: 1rem;
+    }
+
+    .characteristics table, 
+    .characteristics th, 
+    .characteristics td {
+        font-size: 0.9rem;
+        padding: 0.3em 0.5em;    
+
+    }
+
+    .characteristics {
+        padding: 1em;
+        margin: 2em auto;
+        width: 95%;
+    }
+
+   .characteristics h2 {
+        font-size: clamp(1rem, 8vw, 3rem);
+    }
+
+    .why-inedible {
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .why-header {
+        flex: 1 0 100%;
+        font-size: clamp(1.3rem, 10vw, 2.5rem) !important;
+        font-size: 2rem;
+    }
+
+    .why-cards {
+        display: flex;           
+        flex-direction: column;  
+        gap: 1em;
+        width: 100%;
+    }
+
+    .why-card {
+        width: 100%;             
+    }
+
+    .occurrence{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    .occurrence-title{
+        font-size: clamp(1.5rem, 7vw, 2.4rem);
+    }
+
+    .occurrence h3{
+        font-size: clamp(1rem, 7vw, 2rem);
+
+    }
+
+
+    .occurrence-cards {
+        width: 100%;
+    }
+
+    .occurrence-card img {
+        width: 20%;
+        margin-bottom: 0.5em;
+    }
+
+
+    .uses-row {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .use-box {
+        flex: unset;      
+        width: 100%;     
+        text-align: center;
+        padding: 1em;     
+        font-size: 1.1rem; 
+    }
+
+ 
+    .uses-title-box {
+        font-size: clamp(1.5rem, 5vw, 2.5rem) !important; 
+        padding: 0.5em 0;
+    }
+
+
+    .species-cards {
+        flex-direction: column;
+        gap: 1.5em;
+        align-items: center;
+    } 
+ 
+    .species-card {
+        width: 100%;
+    }
+
+    .species-card img {
+        height: auto;
+    }
+
+    .species-info p,
+    .species-info h3 {
+        overflow-wrap: break-word; 
+        hyphens: auto;           
+    }
+
+    .similar-species-title{
+        font-size: clamp(1.8rem, 8vw, 4rem);
+    }
+
+
+}
+

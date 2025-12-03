@@ -1,0 +1,135 @@
+body{
+  background-color: #C7AF94;
+}
+
+/*-----------------------------HERO PART-----------------------------*/
+.hero{
+  background-image: url("../images/hero_images/contact_hero.jpg");
+  height: 60vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-title{
+  color:#C7AF94;
+  font-size: 3rem;
+  text-align: center;   
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+
+
+
+/*-------------------------------FORM-------------------------------*/
+
+.contact-form{
+  background-color: #412F26;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 60%;
+  position: relative;
+  color: #516140;
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  margin: -10rem auto 2rem auto;
+}
+
+.contact-form h3{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.contact-form form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding: 0.8rem;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+}
+
+.contact-form label{
+  color:#C7AF94;
+  margin-top: 1.5rem;
+}
+
+.contact-form button{
+  border-radius: 15px;
+  background-color: #516140;
+  color:#412F26;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  margin-top: 3rem;
+}
+
+.contact-form button:hover{
+  background-color: #C7AF94;
+  color: #412F26;
+}
+
+
+
+
+/**************************************************************************************
+____________________________________RESPONSYWNOŚĆ____________________________________*/
+
+@media(max-width: 992px){
+  .contact-form {
+    max-width: 80%;
+    margin-top: -8rem;
+  }
+
+ .hero-title{
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }  
+}
+
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    height: 35vh;
+  }
+
+  .hero-title{
+    font-size: clamp(1rem, 3vw, 2rem);
+  }
+
+  .contact-form {
+    max-width: 90%;
+    padding: 1.2rem;
+    margin: -6rem auto 2rem auto;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .contact-form button {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+  }
+
+  
+}
